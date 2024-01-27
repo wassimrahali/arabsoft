@@ -9,6 +9,9 @@ import UpdateUserPage from './UpdateUserPage.js'
 import { isAuthenticated } from './Backend';
 import ReservationForm from './ReservationForm.js';
 import AdminReservationList from './AdminReservationList.js';
+import NotFound from './Notfound.js';
+import MyForm from './MyForm.js';
+ 
 
 
 function App() {
@@ -20,14 +23,19 @@ function App() {
       <Router>
         {/* Defining different Routes using Routes and Route components */}
         <Routes>
+        <Route path='*' element={<NotFound />} />
+
           {/* Route for the Home component */}
           <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
+
           {/* Route for the Signin component */}
           <Route path="/signin" element={<Signin />} />
           {/* Route for the ProductList component */}
           <Route path="/product" element={<ProductList />} />
           <Route path="/update" element={<UpdateUserPage />} />
           <Route path="/submit" element={<ReservationForm />} />
+          <Route path="/contact" element={<MyForm />}/>
           {/* Route for the Signup component */}
           <Route path='/signup' element={<Signup />} />
           {/* Route for the Admin component */}

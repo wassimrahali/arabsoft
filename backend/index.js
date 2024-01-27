@@ -1,21 +1,20 @@
-// app.js
 const express = require('express');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const nodemailer = require('nodemailer');
 require('dotenv').config();
-
+const emailRoutes = require('./routes/emailRoutes');
 
 // Routes
 const UserRoute = require('./routes/user');
 const AuthRoute = require('./routes/auth');
-const ProductRoute = require('./routes/product'); // Import product routes
+const ProductRoute = require('./routes/product');
 const reservationRoutes = require('./routes/reservation');
 
 // Database connection
 mongoose
-  .connect(`${process.env.MongoDB_URL}`, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MongoDB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Database connected successfully'))
   .catch((err) => console.log('Database connection failed', err));
 
@@ -24,27 +23,26 @@ const port = process.env.PORT || 8000;
 const app = express();
 
 app.use('/uploads', express.static('uploads'));
-app.use((err, req, res, next) => {
-  console.error('Error:', err);
-  // Additional error handling logic
-  res.status(500).send('Internal Server Error');
-});
-// Middleware
-app.use(cors())
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({   
-    extended: true
-}));
 
+// Middleware
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Calling the routes
 app.use('/api', AuthRoute);
 app.use('/api', UserRoute);
-app.use('/api', ProductRoute); // Use the product routes
+app.use('/api', ProductRoute);
 app.use(reservationRoutes);
+app.use('/email', emailRoutes); // Updated route path
+
+// Error Handling Middleware
+app.use((err, req, res, next) => {
+  console.error('Error:', err);
+  res.status(500).send('Internal Server Error');
+});
 
 // Start server
 app.listen(port, () => {
   console.log(`App is running at http://localhost:${port}`);
 });
-
