@@ -1,0 +1,33 @@
+
+
+.carousel-caption button.btn-light {
+    background-color: #ffffff; /* Set the background color to white */
+    color: #000; /* Set the text color to black */
+    margin: 10px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Set the font size */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  
+
+  /* styles.css */
+
+/* Add fade transition to the Carousel items */
+.carousel-item {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Set initial opacity to 0 for a fade-in effect */
+  .carousel-item.active,
+  .carousel-item-next,
+  .carousel-item-prev {
+    opacity: 1;
+  }
+  
+  .carousel-item:not(.active) {
+    opacity: 0;
+  }
+  

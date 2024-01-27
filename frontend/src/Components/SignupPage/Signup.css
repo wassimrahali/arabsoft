@@ -1,0 +1,423 @@
+/* styles.css */
+body{
+  background-color: #eb5803;
+  color: #ffffff;
+}
+.dashboard {
+    display: flex;
+    align-items: center;
+  }
+  
+  .greeting {
+    margin-right: 10px;
+    margin-bottom: 0px; /* Adjust the margin as needed */
+  }
+
+  /* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #ac1a1a;
+  --error: #e7195a;
+}
+
+header {
+  background: #fff;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+
+
+/* new workout form */
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a, nav button {
+  margin-left: 10px;
+}
+nav button {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* auth forms */
+form.signup, form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+/* Login.css */
+
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #ff0000;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Add more styles as needed */
+/* Add this CSS in a separate stylesheet or in your component's CSS-in-JS solution */
+
+.signup {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup h3 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.input-div {
+  position: relative;
+}
+
+.icons-span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Navbar styling (adjust as needed) */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+/* Add more styles as needed */
+/* Add this CSS in a separate stylesheet or in your component's CSS-in-JS solution */
+
+.signup {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup h3 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.input-div {
+  position: relative;
+}
+
+.icons-span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+}
+
+.label {
+
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.login-button {
+  width: 100%;
+  background-color: #1aac83;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:disabled, button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.icons-span {
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Add more styles as needed */
+
+
+.carousel-caption button.btn-light {
+    background-color: #ffffff; /* Set the background color to white */
+    color: #000; /* Set the text color to black */
+    margin: 10px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Set the font size */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  
+
+  /* styles.css */
+
+/* Add fade transition to the Carousel items */
+.carousel-item {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Set initial opacity to 0 for a fade-in effect */
+  .carousel-item.active,
+  .carousel-item-next,
+  .carousel-item-prev {
+    opacity: 1;
+  }
+  
+  .carousel-item:not(.active) {
+    opacity: 0;
+  }
+  /* Navbar.css */
+
+/* Navbar background color */
+.navbar {
+  background-color: black;
+}
+
+/* Navbar links color */
+.navbar-nav .nav-link {
+  color: rgb(0, 0, 0) !important; /* !important is used to override Bootstrap styles */
+}
+
+/* Active link color */
+.navbar-nav .nav-link.active {
+  color: #9d00ff !important;
+}
+
+/* Sign in and sign up links color */
+.navbar-nav .nav-link.auth-links {
+  color: rgb(0, 0, 0) !important;
+}
+
+/* Sign out button color */
+.navbar .dashboard button {
+  background-color: #9900ff;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+/* styles.css */
+
+/* styles.css */

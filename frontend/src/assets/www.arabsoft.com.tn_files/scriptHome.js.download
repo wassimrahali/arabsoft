@@ -1,0 +1,68 @@
+"use strict";
+(function ($) {
+    $(document).ready(function () {
+// Activate Carousel
+        $('#myCarousel').carousel({
+            interval: 4000
+        });
+// Enable Carousel Indicators
+        $(".item").click(function () {
+            $("#myCarousel").carousel(1);
+        });
+
+// Enable Carousel Controls
+        $(".left").click(function () {
+            $("#myCarousel").carousel("prev");
+        });
+		
+		$('#myCarouselpost').carousel({
+            interval: 4000
+        });
+// Enable Carousel Indicators
+        $(".item").click(function () {
+            $("#myCarouselpost").carousel(1);
+        });
+
+// Enable Carousel Controls
+        $(".left").click(function () {
+            $("#myCarouselpost").carousel("prev");
+        });
+
+        var div1Top =0;
+
+
+        $(window).on('scroll', function () {
+
+            if ($(window).scrollTop() >= div1Top) {
+                $('.counter').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('data-count');
+
+                    $({countNum: $this.text()}).animate({
+                            countNum: countTo
+                        },
+
+                        {
+
+                            duration: 4000,
+                            easing: 'linear',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                                //alert('finished');
+                            }
+
+                        });
+
+
+                });
+            }
+        });
+
+    });
+})(jQuery);
+
+
+
