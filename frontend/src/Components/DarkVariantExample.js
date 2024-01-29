@@ -13,7 +13,8 @@ function DarkVariantExample() {
         <Carousel.Caption className="text-white">
           <h5>First slide label</h5>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <button className="btn btn-light">SAVOIR PLUS</button>
+          <button className="contact-button-1">View More</button>
+
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -21,7 +22,8 @@ function DarkVariantExample() {
         <Carousel.Caption className="text-white">
           <h5>Second slide label</h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button className="btn btn-light">SAVOIR PLUS</button>
+          <button className="contact-button-4">View More</button>
+
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -29,7 +31,8 @@ function DarkVariantExample() {
         <Carousel.Caption className="text-white">
           <h5>Third slide label</h5>
           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          <button className="btn btn-light">SAVOIR PLUS</button>
+          <button className="contact-button-3">View More</button>
+
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

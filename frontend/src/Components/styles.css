@@ -11,8 +11,7 @@
   font-display: swap;
 }
 
-/* styles.css */
-/* styles.css */
+
 
 .carousel-caption {
   position: absolute;
@@ -94,6 +93,45 @@ margin-bottom: 20px;
 
 }
 
+.contact-button-1 {
+  background-color: #634274;
+  color: #ffffffe4;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Intrum Sans';
+
+
+}
+.contact-button-4 {
+background-color: #1D527F;
+color: #ffffffe4;
+font-size: 1.2rem;
+padding: 12px 24px;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
+font-family: 'Intrum Sans';
+
+
+}
+
+
+.contact-button-3 {
+background-color:#993062;
+color: #ffffffe4;
+font-size: 1.2rem;
+padding: 12px 24px;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
+font-family: 'Intrum Sans';
+
+
+}
+
 
 .contact-button:hover {
   background-color: #bea9b5;
@@ -162,21 +200,103 @@ margin-bottom: 20px;
   
   
 }
+
+
+/* styles.css */
+
 .card-group {
   display: flex;
-  flex-wrap: wrap;
-  font-family:'Intrum Sans'; 
-  background: #1d858bef;
+  justify-content: space-around;
+  margin: 70px; /* Adjust margin as needed */
+  
 }
 
 .card {
-  width: 18rem; /* Adjust as needed */
-  margin: 1rem; /* Adjust as needed */
-  border: 1px solid #ccc; /* Optional: Add a border for separation */
+  margin: 30px; /* Adjust margin as needed */
+  overflow: hidden; /* Hide overflow content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  background-color: #F5F5F5;
+
 }
 
 .card-body {
-  /* Add any additional styling for the card body */
+  padding: 24px;
+  margin-right: 30px;
+
+
 }
 
+.card-title {
+  font-size:40px; /* Increase the font size of the card title */
+  margin-bottom: 10px; /* Add margin below the card title */
+font-family: 'Intrum Sans';  
+font-weight: 600;
+text-align: left;
+}
+
+.card-text {
+  font-size:16px; /* Increase the font size of the card title */
+  color: #000000; /* Set a color for the card text */
+  font-family:'Intrum Sans',Arial, Helvetica, sans-serif ;
+  text-align: left;
+
+}
+
+/* styles.css */
+
+
+
+
+
+.card {
+  flex: 1; /* Make cards flexible to take equal width within the flex container */
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  width: 100%; /* Make sure the image takes up the full width of the card */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 calc(50% - 20px); /* Make cards take 50% width on screens 768px and larger */
+
+  }
+  .d-flex {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+  }
+ 
+}
+
+@media (min-width: 992px) {
+  .card {
+    flex: 0 0 calc(33.33% - 20px); /* Make cards take 33.33% width on screens 992px and larger */
+  }
+}
+
+
+
 /* Add any other styles as needed */
+
+.custom-footer {
+  background-color: #1d858bef; /* Change the background color to your desired color */
+  color: rgb(255, 255, 255); /* Set text color to black */
+  font-family: 'Intrum Sans';
+}
+
+.custom-footer a {
+  color: rgb(255, 255, 255) !important; /* Set link color to black */
+}
+
+.custom-footer a:hover {
+  color: #1d858bef; /* Change link color on hover if needed */
+}
+
+.custom-arrow {
+  font-size: 24px;
+  color: #000000; /* Change the color as needed */
+  /* Add any additional styles you want to customize */
+  margin-left:500px;
+}
