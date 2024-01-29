@@ -1,40 +1,32 @@
+import React from 'react';
+import './styles.css'; // Assuming you have a separate CSS file
+
 const PackingSolutions = () => {
   return (
     <>
-      <section>
-        <div className="container">
-          <div className="row align-items-center">
-            {/*   ---------------------------   */}
-            
-            {/* --------------------------------- */}
-            <div className="col-lg-6 col-12 text-center">
-              <div>
-                <h1>For small business</h1>
-                <p>
-                  If you're just launching your brand and are uncertain about
-                  how many products you'll sell, we get it. That's why we offer
-                  packaging solutions at low minimums of 100 units so that you
-                  can still get branded packaging affordably.
-                </p>
-              </div>
-              <div>
-                <h1>For growing businesses</h1>
-                <p>
-                  If you're just launching your brand and are uncertain about
-                  how many products you'll sell, we get it. That's why we offer
-                  packaging solutions at low minimums of 100 units so that you
-                  can still get branded packaging affordably.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-6 col-12">
-                <div className="card border-0 p-3">
-                        <img src={require("../assets/img6.png")} alt="" />
-                </div>
-            </div>
+      <div className="card-group">
+        <div className="card">
+          {/* <img className="card-img-top" src="..." alt="Card image cap"> */}
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
         </div>
-      </section>
+        <div className="card">
+          {/* <img className="card-img-top" src="..." alt="Card image cap"> */}
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+        <div className="card">
+          {/* <img className="card-img-top" src="..." alt="Card image cap"> */}
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

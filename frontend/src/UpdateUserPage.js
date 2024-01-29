@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.css'
-
+import Dashboard from './Components/Dashboard/Dashboard'
 const UpdateUserPage = ({ match }) => {
   const [user, setUser] = useState({
     name: '',
@@ -59,7 +59,11 @@ const UpdateUserPage = ({ match }) => {
   };
 
   return (
+    
     <div>
+      <>
+      <Dashboard />
+      </>
       <h2>User Information</h2>
       {user && (
         <div>

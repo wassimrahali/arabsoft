@@ -1,33 +1,182 @@
+@font-face {
+  font-family: 'Intrum Sans';
+  src: url('./Dashboard/IntrumSans-Medium.eot');
+  src: local('Intrum Sans Medium'), local('IntrumSans-Medium'),
+      url('./Dashboard/IntrumSans-Medium.eot') format('embedded-opentype'),
+      url('./Dashboard/IntrumSans-Medium.ttf') format('woff2'),
+      url('./Dashboard/IntrumSans-Medium.woff') format('woff'),
+      url('./Dashboard/IntrumSans-Medium.woff2') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* styles.css */
+/* styles.css */
+
+.carousel-caption {
+  position: absolute;
+margin-bottom: 20px;
+  text-align: center;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  font-family:'Intrum Sans';
+   font-size:70px;
+   margin-right: -270px;
+  margin: 0;
+}
+
+.carousel-caption button {
+  margin-top: 10px;
+}
 
 
-.carousel-caption button.btn-light {
-    background-color: #ffffff; /* Set the background color to white */
-    color: #000; /* Set the text color to black */
-    margin: 10px;
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 16px; /* Set the font size */
-    cursor: pointer; /* Add a pointer cursor on hover */
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+/* styles.css */
+
+.carousel-item img {
+  object-fit: cover;
+  height: 70vh; /* Set the height as needed */
+}
+
+
+
+.carousel-caption h5,
+.carousel-caption p {
+  margin: 0;
+}
+
+.carousel-caption button {
+  margin-top: 10px;
+}
+
+
+  .help-section {
+    background-color: #634274;
+    padding: 50px;
+    text-align: left;
+    margin-left: -200px;
+   
+
+  }
+  
+  .help-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .help-content h1 {
+    color: #ffffff;
+    font-size: 60px;
+    margin-bottom: -10px 0 16px;
+    font-family: 'Intrum Sans';
+
+
+  }
+  
+  .help-content p {
+    color: #ffffff;
+    font-size: 1.2rem;
+  }
+
+  .contact-button {
+  background-color: #ffffff;
+  color: #000000e4;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Intrum Sans';
+
+
+}
+
+
+.contact-button:hover {
+  background-color: #bea9b5;
+}
+
+@media (max-width: 768px) {
+  
+  .help-section {
+    background-color: #634274;
+    padding: 50px;
+    text-align: left;
+    margin-left: 0px;
+
+  }
+  .help-content h1 {
+    color: #ffffff;
+    font-size: 30px;font-weight: 100;
+
+    margin-bottom: -10px 0 16px;
+    font-family: 'Intrum Sans';
+
+
+  }
+  .contact-button {
+    background-color: #ffffff;
+    color: #000000e4;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Intrum Sans';
+  
+  
+  }
+  .carousel-caption {
+    position: absolute;
+  margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .carousel-caption h5,
+  .carousel-caption p {
+    font-family:'Intrum Sans';
+     font-size:30px;
+     margin-right: -270px;
+    margin: 0;
+  }
+  
+  .carousel-caption button {
+    margin-top: 10px;
   }
   
   
+  
+  
+  
+  .carousel-caption h5,
+  .carousel-caption p {
+    margin: 0;
+  }
+  
+  .carousel-caption button {
+    margin-top: 10px;
+  }
+  
+  
+}
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  font-family:'Intrum Sans'; 
+  background: #1d858bef;
+}
 
-  /* styles.css */
+.card {
+  width: 18rem; /* Adjust as needed */
+  margin: 1rem; /* Adjust as needed */
+  border: 1px solid #ccc; /* Optional: Add a border for separation */
+}
 
-/* Add fade transition to the Carousel items */
-.carousel-item {
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  /* Set initial opacity to 0 for a fade-in effect */
-  .carousel-item.active,
-  .carousel-item-next,
-  .carousel-item-prev {
-    opacity: 1;
-  }
-  
-  .carousel-item:not(.active) {
-    opacity: 0;
-  }
-  
+.card-body {
+  /* Add any additional styling for the card body */
+}
+
+/* Add any other styles as needed */
