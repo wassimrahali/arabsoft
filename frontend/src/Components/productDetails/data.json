@@ -1,59 +1,34 @@
 {
-    "sirhAjir": {
-        "title" :"Ajir : Gestion des Ressoures Humaines",
-      "description": "Bâti sur les nouvelles technologies de base de données, le SIRH Ajir, est un progiciel puissant, innovant et répondant aux diverses exigences règlementaires selon la localisation. D’une grande richesse fonctionnelle et d’une puissance de calcul importante, Ajir permet de s’adapter aux cas les plus complexes, ainsi qu’aux changements de règles sociales.",
-      "image": "RH.jpg",
-      "modules": {
-        "traitementDesSalaires": {
-          "paiesNormales": true,
-          "paiesSupplementaires": ["Primes de rendement", "Prime de bilan", "Gratification"],
-          "rubriquesDePaie": true,
-          "bulletinsDePaie": true,
-          "declarationCaissesRetraites": ["CNSS", "CNRPS"],
-          "declarationRevenus": true,
-          "journauxDePaie": true,
-          "fichesIndividuellesDeSalaires": true
-          
-        },
-        "conges": {
-          "typesConges": ["Congés annuels", "Sans soldes", "Maternités", "Maladies", "Exceptionnels"],
-          "valorisationAutomatique": true,
-          "etatPreparatifConges": true,
-          "etatsRecapitulatifPrevisionsConges": true,
-          "gestionTitresConge": true,
-          "gestionNiveauxValidationConges": true,
-          "gestionCongesViaPortailLibreService": true
-        },
-        "pointage": {
-          "gestionCategoriesProfessionnelles": true,
-          "gestionShiftsTravail": true,
-          "gestionCalendriersTravail": ["Jours fériés", "Particularités locales"],
-          "pointageManuel": true,
-          "transfertPointeuses": ["Digitales", "À proximité", "Code à barre", "Magnétiques"],
-          "valorisationJours": ["Ouvrés", "Ouvrables", "Calendaires"],
-          "transfertAutomatiqueVariablesPaie": true,
-          "etatRecapitulatifAbsences": true,
-          "gestionAcces": ["Ouverture/fermeture automatique portes", "Tourniquets"]
-        },
-        "gestionSociale": {
-          "assurance GroupeRemboursementFraisMedicaux": true,
-          "medecineTravailAccidentsTravail": true,
-          "avantagesEnNature": ["Habillement", "Tickets restaurant", "Outils", "Moyens de transport", "Logement", "Bons de carburants"],
-          "oeuvresScolairesUniversitaires": true,
-          "oeuvresSociales": ["Jardins d’enfants", "Excursions", "Colonies de vacances"],
-          "securiteSociale": true,
-          "medaillesPrixRecompense": true,
-          "electionsRepresentantsActivitesAssociativesSyndicales": true,
-          "gestionActivitesAssociativesSyndicalesSportives": true
-        },
-        "reglementationProcedures": ["Conventions collectives", "Décrets et lois", "Réglementations internes", "Notes et circulaires RH", "Interfaçage GED"],
-        "reportingTableauxBord": ["Tableaux", "Graphes", "Etats"],
-        "gestionAdministrative": ["Fiche signalétique employé", "Position des employés", "Promotions et avancements", "Mutations", "Mesures disciplinaires", "Départs définitifs", "Ordres de mission", "Réintégrations", "Attestations"],
-        "recrutement": ["Définition des besoins en ressources", "Gestion des avis de recrutement", "Gestion des relations avec les bureaux et sites d’emploi", "Suivi et sélection des candidats", "Gestion des concours internes et externes", "Commissions des examens", "Notations", "Points d’avancements des recrutements", "Interfaçage avec modules gestion administrative, emploi et compétences et formation"],
-        "emploisCompetences": ["Gestion des organigrammes", "Référentiel emploi", "Liste des critères d’évaluation", "Liste des postes vacants", "Détection des besoins", "Adéquation des ressources avec les besoins de l’entreprise", "Gestion des évaluations", "Gestion des plans de carrière"],
-        "formation": ["Gestion des thèmes de formation (selon besoins stratégiques de l’entreprise ou besoins exprimés par les employés)", "Gestion des catalogues de formation interne ou externe", "Gestion des organismes de formation", "Budgétisation des plans de formation", "Construction du plan de formation", "Gestion des fiches de présence", "Évaluation de la formation", "Suivi financier des actions de formation", "Gestion des prises en charges des actions de formation", "Planification des sessions de formation"],
-        "prets": ["Gestion de différents types de prêts et oppositions", "Prêts avec ou sans intérêts", "Plafond de crédit et taux d’endettement", "Échéancier et tableau d’amortissement", "Gestion des niveaux de validation de l’octroi des prêts", "Alimentation automatique des variables de paie", "Intégration avec la comptabilité financière", "Gestion des prêts via le portail libre-service"]
-      }
+  "solution": "AMIN",
+  "topic": "LA GESTION FINANCIÈRE ET COMPTABLE",
+  "description": "Dans un environnement en perpétuelle mutation économique, technologique et règlementaire, le Système d’Information comptable et financier de l’entreprise doit adhérer à toutes les évolutions et conserver son rôle de centralisateur des flux de tout le métier de l’entreprise générateur de transactions comptables et financières. Le système comptable et financier doit obéir à la règlementation légale et fiscale du pays en fournissant tous les rapports et documents exigibles par la législation fiscale. Amin vous assure la couverture de l’intégralité de votre chaîne comptable et financière et vous garantit la fiabilité et la traçabilité de vos opérations quotidiennes. Sa conception modulaire vous permet de vous équiper en fonction de vos besoins.",
+  "features": [
+    "Adhérence aux évolutions économiques, technologiques, et règlementaires",
+    "Centralisation des flux de l'entreprise",
+    "Génération de transactions comptables et financières",
+    "Conformité à la règlementation légale et fiscale",
+    "Production des rapports et documents exigibles par la législation fiscale",
+    "Couverture de l'intégralité de la chaîne comptable et financière",
+    "Fiabilité et traçabilité des opérations quotidiennes",
+    "Conception modulaire pour s'adapter aux besoins",
+    {
+      "Trésorerie Prévisionnelle": [
+        "Mise à jour des comptes de trésorerie",
+        "Gestion des prévisions, de réalisations et des écarts",
+        "Intégration avec la gestion des encaissements, des décaissements, des emprunts et des placements",
+        "Rapports de suivi de la situation prévisionnelle de trésorerie"
+      ]
+    },
+    {
+      "Opérations Bancaires": [
+        "Echelles d’intérêts",
+        "Commissions bancaires",
+        "Contrôle du découvert",
+        "Equilibrage des comptes",
+        "Suivi des conditions prévues par les conventions avec les banques",
+        "Consolidation des comptes",
+        "Analyse des écarts"
+      ]
     }
-  }
-  
+  ]
+}

@@ -13,11 +13,11 @@ const Home = () => {
   return (
     <div className="home">
       <Dashboard />
-      <AjirDetails />
-      {/* <DarkVariantExample />
+      {/* <AjirDetails /> */}
+      <DarkVariantExample />
       <PackingSolutionleft />
       <PackingSolutions />
-      <Footer /> */}
+      <Footer />
       
     
      
