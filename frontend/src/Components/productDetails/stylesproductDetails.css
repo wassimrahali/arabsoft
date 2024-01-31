@@ -29,7 +29,9 @@
         position: absolute; }
 
     .ul-check.primary li:before {
-      color: #000000; }
+      color: #1d858bef;
+    
+    }
   
   .select-wrap, .wrap-icon {
     position: relative; }
@@ -111,7 +113,7 @@
 
 .custom-h2 {
   font-family: 'Intrum Sans';
-  color: black; /* Your custom text color */
+  color: #634274; /* Your custom text color */
 }
 
 .custom-p {

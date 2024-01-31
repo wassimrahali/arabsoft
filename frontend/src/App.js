@@ -10,7 +10,7 @@ import { isAuthenticated } from './Backend';
 import ReservationForm from './ReservationForm.js';
 import AdminReservationList from './AdminReservationList.js';
 import NotFound from './Notfound.js';
-import MyForm from './MyForm.js';
+import MyForm from './Myform.js';
 import  AjirDetails  from '../src/Components/productDetails/AjirDetails.js'
 
 

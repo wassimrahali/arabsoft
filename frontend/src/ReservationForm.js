@@ -2,28 +2,32 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Components/SigninPage/signin.css';
+import Dashboard from './Components/Dashboard/Dashboard';
+import './ReservationForm.css';
+import Footer from './Components/Footer';
+import Reservationphoto from '../src/assets/ReservationPhoto.jpg'
 
 const ReservationForm = () => {
-    const [productData, setProductData] = useState({
-        name: '',
-        detail: '',
-        image: null,
-      });
-    
-   
-    
-      useEffect(() => {
-        const fetchProducts = async () => {
-          try {
-            const response = await axios.get('http://localhost:8000/api/all');
-            setProducts(response.data);
-          } catch (error) {
-            console.error('Error fetching products:', error);
-          }
-        };
-    
-        fetchProducts();
-      }, []);
+  const [productData, setProductData] = useState({
+    name: '',
+    detail: '',
+    image: null,
+  });
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get('http://localhost:8000/api/all');
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,16 +37,15 @@ const ReservationForm = () => {
   });
 
   const [products, setProducts] = useState([]);
-  
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+
   useEffect(() => {
-    // Fetch products from your server
     const fetchProducts = async () => {
       try {
         const response = await axios.get('http://localhost:8000/api/products');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
-        // Handle error, show an error message, etc.
       }
     };
 
@@ -60,24 +63,27 @@ const ReservationForm = () => {
     e.preventDefault();
 
     try {
-      // Send the reservation data to the server
       await axios.post('http://localhost:8000/api/reservations', formData);
+
+      // Show success alert
+      setShowSuccessAlert(true);
 
       // Optionally, you can handle success or redirect the user
       console.log('Reservation submitted successfully');
     } catch (error) {
       console.error('Error submitting reservation:', error);
-      // Handle error, show an error message, etc.
     }
   };
-
-
-
-
   return (
-    <div>
-      <h2>Reservation Form</h2>
-      <form onSubmit={handleSubmit}>
+    <>
+          <Dashboard />
+                <img src={Reservationphoto} className='reservationImg'  />
+
+   
+    
+
+      <h2 className='titre-form'>Pour Réserver Remplire Cette Formulaire</h2>
+      <form className='formi' onSubmit={handleSubmit}>
         <label>
           Name:
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
@@ -116,9 +122,20 @@ const ReservationForm = () => {
           </select>
         </label>
         <br />
+        {showSuccessAlert && (
+        <div className="alert alert-success" role="alert">
+          Reservation submitted successfully!
+        </div>
+      )}
         <button type="submit">Submit Reservation</button>
+
+     
       </form>
-    </div>
+
+      <Footer />
+
+    
+    </>
   );
 };
 

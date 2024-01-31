@@ -13,6 +13,8 @@ import {
 } from "@chakra-ui/react";
 import "./App.css";
 
+import Dashboard from './Components/Dashboard/Dashboard'
+import Footer from './Components/Footer'
 export default function MyForm() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -44,6 +46,8 @@ export default function MyForm() {
   };
 
   return (
+   <>
+    <Dashboard />
     <div className="flex-container">
       <div className="form-container">
         <div className="heading">Contact Us</div>
@@ -85,5 +89,7 @@ export default function MyForm() {
         </div>
       </div>
     </div>
+    <Footer />
+   </>
   );
 }

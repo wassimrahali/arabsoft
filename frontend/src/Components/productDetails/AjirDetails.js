@@ -36,7 +36,7 @@ const HRManagementDetails = () => {
                   système d’échange paramétrable permettant une intégration
                   dynamique en temps réel ou en différé.
                 </p>
-                <a className="custom-btn" href="">
+                <a className="custom-btn" href="/submit">
                  Order Now
                 </a>
               </div>
@@ -81,15 +81,20 @@ const HRManagementDetails = () => {
 
       <div class="col-md-6 col-lg-4 mb-lg-0 mb-4" data-jarallax-element="20">
         <div class="box-with-humber bg-white p-5">
-          <span class="icon icon-laptop2 mr-2 text-primary h3 mb-3 d-block"></span>
+          <span class="icon icon-laptop2 mr-2 text-primary h3 mb-3 d-block">
+            
+          </span>
           <h2 class="custom-h2">Opérations Bancaires</h2>
+          <p class=" custom-paragraph mb-4">
+          Suivi des conditions prévues par les conventions avec les banques
+          </p>
           <ul class="list-unstyled ul-check primary">
             <li class="custom-list-item">Echelles d’intérêts</li>
             <li class="custom-list-item">Commissions bancaires</li>
             <li class="custom-list-item">Contrôle du découvert</li>
-            <li class="custom-list-item">Suivi des conditions prévues par les conventions avec les banques</li>
             <li class="custom-list-item">Consolidation des comptes</li>
             <li class="custom-list-item">Analyse des écarts </li>
+            <li class="custom-list-item"> ​​Mise à jour des clés de répartition variables ou fixes</li>
           </ul>
         </div>
       </div>
