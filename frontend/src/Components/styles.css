@@ -17,6 +17,7 @@
   position: absolute;
 margin-bottom: 20px;
   text-align: center;
+  
 }
 
 .carousel-caption h5,
@@ -38,6 +39,7 @@ margin-bottom: 20px;
 .carousel-item img {
   object-fit: cover;
   height: 70vh; /* Set the height as needed */
+  
 }
 
 
@@ -215,7 +217,7 @@ font-family: 'Intrum Sans';
   margin: 30px; /* Adjust margin as needed */
   overflow: hidden; /* Hide overflow content */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  background-color: #F5F5F5;
+  background-color: #ffffff;
 
 }
 
@@ -274,6 +276,8 @@ text-align: left;
   .card {
     flex: 0 0 calc(33.33% - 20px); /* Make cards take 33.33% width on screens 992px and larger */
   }
+
+
 }
 
 
@@ -299,4 +303,39 @@ text-align: left;
   color: #000000; /* Change the color as needed */
   /* Add any additional styles you want to customize */
   margin-left:500px;
+}
+
+
+.responsive-button {
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.responsive-button i {
+  margin-left: -10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive-button {
+      font-size: 14px;
+  }
+}
+
+
+/* Add margin between h2 and cards */
+.titre {
+  font-size:  40px;
+  font-family: 'Intrum Sans';
+  padding: 50px 15px;
+  font-weight: 700;
+  margin-bottom: 0 0 16px;
+
 }

@@ -38,16 +38,17 @@ const Dashboard = () => {
     authenticatedUser ? (
       <div className='dashboard'>
         <div className="button-container">
-          <NavDropdown title={<span><FontAwesomeIcon width="15px" icon={faUser} size="lg" className="mr-2" /> {authenticatedUser.user.name} </span>} id="profileDropdown">
+          <NavDropdown style={{padding:'10px'}} title={<span><FontAwesomeIcon width="15px" icon={faUser} size="lg" className="mr-2" /> {authenticatedUser.user.name} </span>} id="profileDropdown">
+          <NavDropdown.Item as={Link} to="/update">
+              <FontAwesomeIcon style={{color:'black'}} icon={faEdit}/>  <b style={{color:'black'}}>Edit Profile</b>
+            </NavDropdown.Item>
             <NavDropdown.Item onClick={onSignout}>
-              <FontAwesomeIcon icon={faSignOutAlt} />  Logout
+              <FontAwesomeIcon  style={{color:'black'}} icon={faSignOutAlt} />   <b style={{color:'black'}}>Logout</b>
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/update">
-              <FontAwesomeIcon icon={faEdit}/>  Edit Profile
-            </NavDropdown.Item>
+            
           </NavDropdown>
 
-          {authenticatedUser.user.role === 'admin' && navigate('/adminpage')}
+          {authenticatedUser.user.role === 'admin' && navigate('/admin')}
         </div>
       </div>
     ) : (
@@ -99,25 +100,24 @@ const NavScrollExample = () => {
         {/* Responsive Content */}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '600px' }} navbarScroll>
-            <Nav.Link as={Link} to="#action1" className="nav-link">Home</Nav.Link>
+            <Nav.Link as={Link} to="/" className="nav-link">Home</Nav.Link>
             <Nav.Link as={Link} to="#action2" className="nav-link">About us</Nav.Link>
-            <Nav.Link as={Link} to="/product" className="nav-link">Products</Nav.Link>
-            <NavDropdown title="Our Products" id="navbarScrollingDropdown">
-              <NavDropdown.Item as={Link} to="/product" className="nav-dropdown-item">XLIA</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="#" className="nav-dropdown-item">AMIN</NavDropdown.Item>
+            <Nav.Link as={Link} to="/contact" className="nav-link">Contact</Nav.Link>
+            <NavDropdown title="Products" id="navbarScrollingDropdown">
+              <NavDropdown.Item as={Link} to="/products" className="nav-dropdown-item">XLIA</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products" className="nav-dropdown-item">AMIN</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="#" className="nav-dropdown-item">Something else here</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products" className="nav-dropdown-item">Ajir</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           {authenticatedUser ? <Dashboard /> : (
             <Nav className="ms-auto">
-              {/* Existing Sign In and Sign Up Links... */}
               <NavDropdown title={<span><FontAwesomeIcon width="15px" icon={faUser} /> Account</span>} id="profileDropdown">
                 <NavDropdown.Item as={Link} to="/signin" className="nav-dropdown-item">
-                  <FontAwesomeIcon icon={faUserPlus} /> Sign in
+                  <FontAwesomeIcon icon={faUserPlus} style={{color:'black'}} /> <b style={{color:'black'}}>Sign in</b> 
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/signup" className="nav-dropdown-item">
-                  <FontAwesomeIcon icon={faSignInAlt} /> Register
+                  <FontAwesomeIcon icon={faSignInAlt} style={{color:'black'}}/> <b style={{color:'black'}}> Register</b>
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>

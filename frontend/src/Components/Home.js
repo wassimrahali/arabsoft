@@ -5,6 +5,7 @@ import DarkVariantExample from "./DarkVariantExample"
 import PackingSolutionleft from './PackagingSolutionleft'
 import PackingSolutions from './PackingSolutions'
 import Footer from './Footer'
+import AjirDetails from '../Components/productDetails/AjirDetails'
 const Home = () => {
 
 
@@ -12,10 +13,11 @@ const Home = () => {
   return (
     <div className="home">
       <Dashboard />
-      <DarkVariantExample />
+      <AjirDetails />
+      {/* <DarkVariantExample />
       <PackingSolutionleft />
       <PackingSolutions />
-      <Footer />
+      <Footer /> */}
       
     
      

@@ -11,7 +11,8 @@ import ReservationForm from './ReservationForm.js';
 import AdminReservationList from './AdminReservationList.js';
 import NotFound from './Notfound.js';
 import MyForm from './MyForm.js';
- 
+
+ import HRManagementDetails from '../src/Components/productDetails/AjirDetails.js'
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
           {/* Route for the Signin component */}
           <Route path="/signin" element={<Signin />} />
           {/* Route for the ProductList component */}
-          <Route path="/product" element={<ProductList />} />
+          <Route path="/products" element={<ProductList />} />
           <Route path="/update" element={<UpdateUserPage />} />
           <Route path="/submit" element={<ReservationForm />} />
           <Route path="/contact" element={<MyForm />}/>
@@ -40,7 +41,7 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           {/* Route for the Admin component */}
           {authenticatedUser && authenticatedUser.user.role === 'admin' ? (
-            <Route path='/adminpage' element={<AdminReservationList />} />
+            <Route path='/admin' element={<AdminReservationList />} />
             // <Route path='/reservationlist' element={<AdminReservationList/>} />
 
      
@@ -57,6 +58,8 @@ function App() {
         </Routes>
       </Router>
     </div>
+
+    
   );
 }
 

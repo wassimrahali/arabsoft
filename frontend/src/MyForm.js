@@ -8,11 +8,10 @@ import {
   Stack,
   Button,
   Heading,
-  Text,
-  useColorModeValue,
   Textarea,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import './App.css'
+import "./App.css";
 
 export default function MyForm() {
   const [email, setEmail] = useState("");
@@ -45,64 +44,46 @@ export default function MyForm() {
   };
 
   return (
-    <Flex
-      minH={"100vh"}
-      align={"center"}
-      justify={"center"}
-      bg={useColorModeValue("gray.50", "gray.800")}
-    >
-      <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
-        <Stack align={"center"}>
-          <Heading fontSize={"4xl"}>Send email to the account</Heading>
-          <Text fontSize={"lg"} color={"gray.600"}>
-            Don't forget to subscribe ✌️
-          </Text>
-        </Stack>
-        <Box
-          rounded={"lg"}
-          bg={useColorModeValue("white", "gray.700")}
-          boxShadow={"lg"}
-          p={8}
-        >
-          <Stack spacing={4}>
-            <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
-              <Input
-                type="email"
-                placeholder="Receiver's Email Address"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </FormControl>
-            <FormControl id="email">
-              <FormLabel>Subject</FormLabel>
-              <Input
-                onChange={(e) => setSubject(e.target.value)}
-                type="text"
-                placeholder="Enter the subject here..."
-              />
-            </FormControl>
-            <FormControl id="text">
-              <FormLabel>Message</FormLabel>
-              <Textarea
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Enter your message here..."
-              />
-            </FormControl>
-            <Stack spacing={10}>
-              <Button
-                bg={"blue.400"}
-                color={"white"}
-                _hover={{
-                  bg: "blue.500",
-                }}
-                onClick={() => sendEmail()}
-              >
-                Send Email
-              </Button>
-            </Stack>
+    <div className="flex-container">
+      <div className="form-container">
+        <div className="heading">Contact Us</div>
+        <div>
+          <FormControl className="form-control" id="email">
+            <FormLabel>Email address</FormLabel>
+            <Input
+              type="email"
+              placeholder="Receiver's Email Address"
+              onChange={(e) => setEmail(e.target.value)}
+              className="input-group"
+            />
+          </FormControl>
+          <FormControl className="form-control" id="email">
+            <FormLabel>Subject</FormLabel>
+            <Input
+              onChange={(e) => setSubject(e.target.value)}
+              type="text"
+              placeholder="Enter the subject here..."
+              className="input-group"
+            />
+          </FormControl>
+          <FormControl className="form-control" id="text">
+            <FormLabel>Message</FormLabel>
+            <Textarea
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Enter your message here..."
+              className="textarea-group"
+            />
+          </FormControl>
+          <Stack spacing={10}>
+            <Button
+              className="button"
+              onClick={() => sendEmail()}
+            >
+              Send Email
+            </Button>
           </Stack>
-        </Box>
-      </Stack>
-    </Flex>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -10,6 +10,8 @@
     font-style: normal;
     font-display: swap;
 }
+/* Override Bootstrap styles for black color */
+
 
 
 
@@ -103,7 +105,9 @@
 
 
 
-
+.red-text{
+  color: #000000;
+}
 
 
   
@@ -167,18 +171,13 @@
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 15px solid var(--white-color);
     position: absolute;
     top: -10px;
     left: 10px;
   }
   
   .navbar .dropdown-item {
-    display: inline-block;
-    color: var(--p-bg-color);
-    font-family: var(--title-font-family); 
-    font-size: var(--menu-font-size);
-    font-weight: var(--font-weight-medium);
+    display: inline-block;   
     letter-spacing: 0.5px;
     position: relative;
   }
