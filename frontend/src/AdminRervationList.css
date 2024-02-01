@@ -1,0 +1,69 @@
+/* AdminReservationList.css */
+@font-face {
+    font-family: 'Intrum Sans';
+    src: url('./Components/Dashboard/IntrumSans-Medium.eot');
+    src: local('Intrum Sans Medium'), local('IntrumSans-Medium'),
+        url('./Components/Dashboard/IntrumSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./Components/Dashboard/IntrumSans-Medium.woff2') format('woff2'),
+        url('./Components/Dashboard/IntrumSans-Medium.woff') format('woff'),
+        url('./Components/Dashboard/IntrumSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+.admin-reservation-list {
+    margin: 20px;
+    overflow-x: auto; /* Add horizontal scroll for small screens */
+  }
+  
+  .reservation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .reservation-table th, .reservation-table td {
+    border: 1px solid #0b8288;
+    padding: 8px;
+    text-align: left;
+    color: black;
+    font-family: 'Intrum Sans';
+  }
+  
+  .reservation-table th {
+    background-color: #1D527F;
+    color: #ddd;
+    font-family: 'Intrum Sans';
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Responsive styles for mobile screens */
+  @media (max-width: 600px) {
+    .reservation-table th, .reservation-table td {
+      font-size: 10px;
+    }
+  
+    .reservation-table th {
+      padding: 6px;
+    }
+
+    .reservation-table {
+        width: 50%;
+      
+      }
+
+      .reservation-table th, .reservation-table td {
+        border: 1px solid #ddd;
+        padding: 4px;
+        text-align: left;
+      }
+  }
+  .titre-Reservation{
+    font-family: 'Intrum Sans';
+    color: black;
+
+  }

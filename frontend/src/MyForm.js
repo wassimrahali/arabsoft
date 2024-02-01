@@ -13,8 +13,9 @@ import {
 } from "@chakra-ui/react";
 import "./App.css";
 
-import Dashboard from './Components/Dashboard/Dashboard'
-import Footer from './Components/Footer'
+import Dashboard from "./Components/Dashboard/Dashboard";
+import Footer from "./Components/Footer";
+
 export default function MyForm() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -38,7 +39,6 @@ export default function MyForm() {
       },
     });
 
-    // HANDLING ERRORS
     console.log(res);
     if (res.status > 199 && res.status < 300) {
       alert("Send Successfully !");
@@ -46,50 +46,49 @@ export default function MyForm() {
   };
 
   return (
-   <>
-    <Dashboard />
-    <div className="flex-container">
-      <div className="form-container">
+    <>
+      <Dashboard />
+      <div className="container mt-5">
         <div className="heading">Contact Us</div>
         <div>
-          <FormControl className="form-control" id="email">
-            <FormLabel>Email address</FormLabel>
-            <Input
-              type="email"
-              placeholder="Receiver's Email Address"
-              onChange={(e) => setEmail(e.target.value)}
-              className="input-group"
-            />
-          </FormControl>
-          <FormControl className="form-control" id="email">
-            <FormLabel>Subject</FormLabel>
-            <Input
-              onChange={(e) => setSubject(e.target.value)}
-              type="text"
-              placeholder="Enter the subject here..."
-              className="input-group"
-            />
-          </FormControl>
-          <FormControl className="form-control" id="text">
-            <FormLabel>Message</FormLabel>
-            <Textarea
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="Enter your message here..."
-              className="textarea-group"
-            />
-          </FormControl>
-          <Stack spacing={10}>
-            <Button
-              className="button"
+          <form>
+            <div className="form-group">
+              <label>Email address</label>
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Receiver's Email Address"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="form-group">
+              <label>Subject</label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter the subject here..."
+                onChange={(e) => setSubject(e.target.value)}
+              />
+            </div>
+            <div className="form-group">
+              <label>Message</label>
+              <textarea
+                className="form-control"
+                placeholder="Enter your message here..."
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+            </div>
+            <button
+              type="button"
+              className="btn btn-primary"
               onClick={() => sendEmail()}
             >
               Send Email
-            </Button>
-          </Stack>
+            </button>
+          </form>
         </div>
       </div>
-    </div>
-    <Footer />
-   </>
+      <Footer />
+    </>
   );
 }

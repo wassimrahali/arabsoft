@@ -44,12 +44,12 @@ function App() {
           <Route path='/ajir' element={<AjirDetails /> } />
 
           {/* Route for the Admin component */}
-          {authenticatedUser && authenticatedUser.user.role === 'admin' ? (
+          {/* {authenticatedUser && authenticatedUser.user.role === 'admin' ? ( */}
             <Route path='/admin' element={<AdminReservationList />} />
             // <Route path='/reservationlist' element={<AdminReservationList/>} />
 
-     
-          ) : null}
+{/*      
+          ) : null} */}
 
           <Route
             path="*"
