@@ -63,7 +63,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #1D527F;
     padding-top: 20px;
   }
   
@@ -99,12 +99,17 @@
 
   .sidebar svg {
     margin-right: 10px; /* Adjust the spacing between the icon and text */
-    font-size: 18px; /* Adjust the icon size */
+    font-size: 18px;
+    color: #1d858bef; /* Adjust the icon size */
   }
 
   /* Sidebar.css */
 
-.logout {margin-top: 250px;}
+.logout {margin-top: 150px;}
 .rau{
     margin-top: 100px;
+}
+
+hr{
+    color: aliceblue;
 }
