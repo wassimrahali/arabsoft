@@ -3,7 +3,7 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './AdminRervationList.css'; // Import the CSS file
-
+import Slidebar from './Components/AdminDahboard/Sidebar'
 const AdminReservationList = () => {
   const [reservations, setReservations] = useState([]);
   const [error, setError] = useState('');
@@ -107,7 +107,10 @@ const AdminReservationList = () => {
   });
 
   return (
+   <>
     <div className="admin-reservation-list">
+    <Slidebar />
+    <div className="content">
       <h2 className="titre-Reservation">Listes des reservations des Logicielles</h2>
       <div className="search-container">
         <label htmlFor="search">Search:</label>
@@ -180,6 +183,8 @@ const AdminReservationList = () => {
         </table>
       )}
     </div>
+    </div>
+   </>
   );
 };
 

@@ -3,7 +3,7 @@ import { Routes, Route, BrowserRouter as Router, Navigate } from 'react-router-d
 import Signin from './Components/SigninPage/Signin.js';
 import Signup from './Components/SignupPage/Signup.js';
 import Home from './Components/Home.js';
-import Admin from './Components/admin.js';  // Assuming your admin component is named Admin
+import AdminUsers from './Components/adminUsers.js';  // Assuming your admin component is named Admin
 import ProductList from './productList.js';  // Correcting the import
 import UpdateUserPage from './UpdateUserPage.js'
 import { isAuthenticated } from './Backend';
@@ -12,9 +12,9 @@ import AdminReservationList from './AdminReservationList.js';
 import NotFound from './Notfound.js';
 import MyForm from './Myform.js';
 import  AjirDetails  from '../src/Components/productDetails/AjirDetails.js'
+import Sidebar from './Components/AdminDahboard/Sidebar.js';
 
-
-
+import AdminProduct from './AdminProduct.js';
 
 
 function App() {
@@ -45,12 +45,15 @@ function App() {
 
           {/* Route for the Admin component */}
           {/* {authenticatedUser && authenticatedUser.user.role === 'admin' ? ( */}
-            <Route path='/admin' element={<AdminReservationList />} />
-            // <Route path='/reservationlist' element={<AdminReservationList/>} />
+            <Route path='/reservation' element={<AdminReservationList />} />
+            <Route path='/users' element={<AdminUsers />} />
+            <Route path='/addproduct' element={<AdminProduct />} />
+
+            {/* // <Route path='/reservationlist' element={<AdminReservationList/>} />
 
 {/*      
-          ) : null} */}
-
+          ) : null} */} 
+<Route path='/side' element={<Sidebar />} />
           <Route
             path="*"
             element={

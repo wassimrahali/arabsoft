@@ -67,3 +67,27 @@
     color: black;
 
   }
+
+  /* AdminRervationList.css */
+
+.admin-reservation-list {
+  display: flex; /* Use flexbox to arrange the sidebar and content */
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  z-index: 1; /* Ensure the sidebar appears above the content */
+}
+
+.content {
+  margin-left: 250px; /* Adjust the margin to match the width of the sidebar */
+  padding: 20px;
+  flex-grow: 1; /* Allow the content to grow to fill available space */
+}
+
+/* Rest of your existing styles... */

@@ -1,0 +1,110 @@
+/* Sidebar.css */
+/* AdminReservationList.css */
+@font-face {
+    font-family: 'Intrum Sans';
+    src: url('../Dashboard/IntrumSans-Medium.eot');
+    src: local('../Dashboard/Intrum Sans Medium'), local('IntrumSans-Medium'),
+        url('../Dashboard/IntrumSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../Dashboard/IntrumSans-Medium.woff2') format('woff2'),
+        url('../Dashboard/IntrumSans-Medium.woff') format('woff'),
+        url('../Dashboard/IntrumSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:#1D527F;
+  padding-top: 20px;
+}
+
+.sidebar h2 {
+  color: white;
+  text-align: center;
+  font-family: 'Intrum Sans';
+
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  font-family: 'Intrum Sans';
+
+}
+
+.sidebar li {
+  padding: 10px;
+  font-family: 'Intrum Sans';
+
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Intrum Sans';
+
+}
+
+
+
+/* Sidebar.css */
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 20px;
+  }
+  
+  .sidebar h2 {
+    color: white;
+    text-align: center;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    background-color: #ddd;
+    color: black;
+    padding: 5px;
+
+
+  }
+  
+
+  .sidebar svg {
+    margin-right: 10px; /* Adjust the spacing between the icon and text */
+    font-size: 18px; /* Adjust the icon size */
+  }
+
+  /* Sidebar.css */
+
+.logout {margin-top: 250px;}
+.rau{
+    margin-top: 100px;
+}
