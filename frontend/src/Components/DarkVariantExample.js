@@ -11,8 +11,8 @@ function DarkVariantExample() {
       <Carousel.Item>
         <img className="d-block w-100" src={img1} alt="First slide" />
         <Carousel.Caption className="text-white">
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h5>Découvrez nos logiciels Entreprise Management pour chaque secteur d’activité</h5>
+          <p></p>
           <button className="contact-button-1">View More</button>
 
         </Carousel.Caption>

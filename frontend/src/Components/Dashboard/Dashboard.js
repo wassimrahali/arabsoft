@@ -16,11 +16,7 @@ import {
   faEdit,
 } from '@fortawesome/free-solid-svg-icons';
 import '../Dashboard/Dashboard.css';
-import logo from '../Dashboard/logo.svg';
-import avatar from '../Dashboard/avatar.png';
 
-// Add the following styles to your Dashboard.css file
-/* ... */
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -48,7 +44,7 @@ const Dashboard = () => {
             
           </NavDropdown>
 
-          {authenticatedUser.user.role === 'admin' && navigate('/admin')}
+          {authenticatedUser.user.role === 'admin' && navigate('/users')}
         </div>
       </div>
     ) : (
@@ -91,7 +87,10 @@ const NavScrollExample = () => {
       style={{padding: '20px' }}
     >
       <Container fluid>
-        <Navbar.Brand href="/"><img className="logo" src={logo} alt="Logo"  /><span /></Navbar.Brand>
+        <Navbar.Brand href="/">
+          {/* <img className="logo" src={logo} alt="Logo"  /> */}
+        <h2>Arabsoft</h2>
+        <span /></Navbar.Brand>
         
         {/* Responsive Toggle Button */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" >
@@ -100,24 +99,27 @@ const NavScrollExample = () => {
         {/* Responsive Content */}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '600px' }} navbarScroll>
-            <Nav.Link as={Link} to="/" className="nav-link">Home</Nav.Link>
-            <Nav.Link as={Link} to="#action2" className="nav-link">About us</Nav.Link>
-            <Nav.Link as={Link} to="/contact" className="nav-link">Contact</Nav.Link>
-            <NavDropdown title="Products" id="navbarScrollingDropdown">
+            <Nav.Link as={Link} to="/" className="nav-link">Accueil</Nav.Link>
+            <Nav.Link as={Link} to="/contact" className="nav-link">Contact</Nav.Link>      
+            <Nav.Link as={Link} to="#action2" className="nav-link">A propos</Nav.Link>
+
+
+            <NavDropdown title="Produits" id="navbarScrollingDropdown">
               <NavDropdown.Item as={Link} to="/products" className="nav-dropdown-item">XLIA</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/products" className="nav-dropdown-item">AMIN</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/products" className="nav-dropdown-item">Ajir</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          
           {authenticatedUser ? <Dashboard /> : (
             <Nav className="ms-auto">
-              <NavDropdown title={<span><FontAwesomeIcon width="15px" icon={faUser} /> Account</span>} id="profileDropdown">
+              <NavDropdown title={<span><FontAwesomeIcon width="15px" icon={faUser} /> Compte</span>} id="profileDropdown">
                 <NavDropdown.Item as={Link} to="/signin" className="nav-dropdown-item">
                   <FontAwesomeIcon icon={faUserPlus} style={{color:'black'}} /> <b style={{color:'black'}}>Sign in</b> 
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/signup" className="nav-dropdown-item">
-                  <FontAwesomeIcon icon={faSignInAlt} style={{color:'black'}}/> <b style={{color:'black'}}> Register</b>
+                  <FontAwesomeIcon icon={faSignInAlt} style={{color:'black'}}/> <b style={{color:'black'}}>Register</b>
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>

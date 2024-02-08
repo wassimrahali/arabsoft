@@ -22,7 +22,7 @@ const HRManagementDetails = () => {
               <div className="text-container">
                 <h1 className="custom-heading">
                   AMIN{" "}
-                  <span className="custom-light-text">
+                  <span style={{fontSize:'30px'}} className="custom-light-text">
                     GESTION FINANCIÈRE ET COMPTABLE
                   </span>
                 </h1>

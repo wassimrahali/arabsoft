@@ -70,12 +70,12 @@ const UpdateUserPage = ({ match }) => {
   };
 
   return (
-    <div>
+    <div className='update-user-page'>
       <>
         <Dashboard />
       </>
       
-      <form onSubmit={handleSubmit}>
+      <form className="formi" onSubmit={handleSubmit}>
         
         <h2 style={{ color: 'black' }}>Update User Information</h2>
         {success && <Alert variant="success">User information updated successfully!</Alert>}

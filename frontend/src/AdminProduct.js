@@ -166,7 +166,7 @@ const AdminProduct = () => {
     <div className="admin-product-container">
       {alert && <Alert variant={alert.variant}>{alert.message}</Alert>}
 
-      <h2>Add Product</h2>
+      <h2 style={{color:'black'}}>Ajouter un produit</h2>
       <form onSubmit={handleSubmit} className="product-form">
         <label>Name:</label>
         <input type="text" name="name" value={productData.name} onChange={handleInputChange} />
@@ -177,10 +177,10 @@ const AdminProduct = () => {
         <label>Image:</label>
         <input type="file" name="image" onChange={handleImageChange} />
 
-        <button type="submit">Add Product</button>
+        <button type="submit" style={{marginTop:"50px"}}>Ajouter un produit </button>
       </form>
 
-      <h2>Product List</h2>
+      <h2  style={{color:'black'}} >Listes des produits</h2>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -207,8 +207,8 @@ const AdminProduct = () => {
                 )}
               </td>
               <td>
-                <button onClick={() => handleDelete(product._id)}>Delete</button>
-                <button onClick={() => handleShowModal(product._id)}>Edit</button>
+                <button onClick={() => handleDelete(product._id)}  style={{margin:"5px"}}>Supprimer</button>
+                <button onClick={() => handleShowModal(product._id) } style={{margin:"5px"}}>Modifier</button>
               </td>
             </tr>
           ))}
@@ -217,7 +217,7 @@ const AdminProduct = () => {
 
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Edit Product</Modal.Title>
+          <Modal.Title>Modifier un produit</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form>

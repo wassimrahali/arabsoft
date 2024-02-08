@@ -34,7 +34,9 @@ const AdminReservationList = () => {
     email: '',
     phoneNumber: '',
     adresse: '',
-    productId: '', // Assuming you have a product ID
+    productId: '',
+    entrepriseName :''
+    // Assuming you have a product ID
   });
   const [products, setProducts] = useState([]);
 
@@ -174,7 +176,7 @@ const AdminReservationList = () => {
                 <td>{reservation.email}</td>
                 <td>{reservation.phoneNumber}</td>
                 <td>{reservation.productName}</td>
-                <td>{reservation.enterpriseName}</td>
+                <td>{reservation.entrepriseName}</td>
                 <td>{reservation.adresse}</td>
                 <td>{new Date(reservation.createdAt).toLocaleString()}</td>
               </tr>

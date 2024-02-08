@@ -38,6 +38,7 @@
     "scroll-carousel-react": "^1.0.0",
     "socket.io-client": "^4.7.4",
     "styled-components": "^6.1.8",
+    "vite-plugin-rewrite-all": "^1.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

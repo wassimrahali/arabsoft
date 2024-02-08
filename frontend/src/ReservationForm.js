@@ -75,15 +75,15 @@ const ReservationForm = () => {
     }
   };
   return (
-    <>
-          <Dashboard />
+    <div className="reservation-form-container">
+    <Dashboard />
                 <img src={Reservationphoto} className='reservationImg'  />
 
    
     
 
       <h2 className='titre-form'>Pour Réserver Remplire Cette Formulaire</h2>
-      <form className='formi' onSubmit={handleSubmit}>
+      <form  onSubmit={handleSubmit}>
         <label>
           Name:
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
@@ -135,7 +135,7 @@ const ReservationForm = () => {
       <Footer />
 
     
-    </>
+   </div>
   );
 };
 

@@ -1,8 +1,23 @@
 import axios from 'axios';
 
-//USER AND AUTH ROUTES
 
-//SIGNIN
+
+export const resetPasswordRequest = (email) => {
+    return axios.post("http://localhost:8000/api/forgot-password", JSON.stringify({ email }), {
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => {
+        return response.data; // Return response data
+    })
+    .catch(err => {
+        return err.response.data; // Return error response data
+    });
+}
+
+
 export const signin = user => {
     // API call to sign in a user
     return axios.post("http://localhost:8000/api/signin", JSON.stringify(user), {

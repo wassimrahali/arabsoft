@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { signin, authenticate } from '../../Backend';
-import { Navigate } from 'react-router-dom';
+import { Navigate,Link } from 'react-router-dom';
 import Navbar from '../Dashboard/Dashboard';
-import { Alert } from 'react-bootstrap'; // Import Bootstrap Alert component
+import { Alert, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import './signin.css';
+import ForgotPassword from './ForgetPassword'; // Import the ForgotPassword component
+import'./ForgetPassword'; // Import the ForgotPassword component
 
-// Signin component for the login form
+
+
 export function Signin() {
   const [values, setValues] = useState({
     email: '',
@@ -16,9 +18,10 @@ export function Signin() {
     loading: false,
     success: false,
     showPassword: false,
+    showForgotModal: false, // State to control modal visibility
   });
 
-  const { email, password, error, loading, success, showPassword } = values;
+  const { email, password, error, loading, success, showPassword, showForgotModal } = values;
 
   const handleChange = (name) => (event) => {
     setValues({ ...values, error: false, [name]: event.target.value });
@@ -45,7 +48,7 @@ export function Signin() {
           }
         })
         .catch();
-    }, 3000); // 5000 milliseconds (5 seconds)
+    }, 3000);
   };
 
   const errorMessage = () => {
@@ -67,6 +70,16 @@ export function Signin() {
     );
   };
 
+  const successMessage = () => {
+    return (
+      success && (
+        <Alert variant="success">
+          Password reset successful. You can now sign in with your new password.
+        </Alert>
+      )
+    );
+  };
+
   return (
     <>
       <Navbar />
@@ -76,11 +89,12 @@ export function Signin() {
       {success ? (
         <Navigate to='/' />
       ) : (
-        <div className='form-container' >
+        <div className='form-container'>
           <div className='form-box' style={{marginTop:'-310px'}}>
             <h2>Sign In</h2>
             {loadingMessage()}
             {errorMessage()}
+            {successMessage()} {/* Add this line to display success message */}
             <div className='form-group'>
               <label htmlFor='email'>Email</label>
               <input type='text' id='email' name='email' value={email} onChange={handleChange('email')} required />
@@ -110,13 +124,25 @@ export function Signin() {
             <div className='login-message'>
               <center>
                 <p className='login_redirect mt-2 '>
-                  Don't have an account ?<b style={{ color: 'red' }}><a href='/signup'> Signup Here</a></b>
+                  Don't have an account ? <b style={{ color: 'red' }}><Link to='/signup'>Signup Here</Link></b>
+                </p>
+                <p className='login_redirect mt-2'>
+                  <hr />
+                  Forgot your password ? <b style={{ color: '#993062' }}  className="pointer" onClick={() => setValues({ ...values, showForgotModal: true })}>Reset Password</b>
                 </p>
               </center>
             </div>
           </div>
         </div>
       )}
+      <Modal show={showForgotModal} onHide={() => setValues({ ...values, showForgotModal: false })}>
+        <Modal.Header closeButton className="close-button" style={{color:'black'}}>
+          <Modal.Title>Forgot Password</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <ForgotPassword />
+        </Modal.Body>
+      </Modal>
     </>
   );
 }

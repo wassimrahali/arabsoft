@@ -3,14 +3,22 @@
 /* Add any global styling you need */
 
 
-form {
-    max-width: 400px;
-    margin: 0 0;
-    padding: 20px;
-    border: 1px solid #1d858bef;
-    margin: 80px;
-    box-shadow: #000000;
-  }
+.reservation-form-container form {
+  max-width: 400px;
+  margin: 0 0;
+  padding: 20px;
+  border: 1px solid #1d858bef;
+  margin: 80px;
+  box-shadow: #000000;
+}
+.update-user-page form {
+  max-width: 400px;
+  margin: 0 0;
+  padding: 20px;
+  border: 1px solid #1d858bef;
+  margin: 80px;
+  box-shadow: #000000;
+}
   
   label {
     display: block;
@@ -153,9 +161,7 @@ form {
         
       }
 
-      /* ReservationForm.css */
-
-/* Style the select element */
+  
 select {
     font-family: 'Intrum Sans';
     width: 100%;
@@ -194,6 +200,4 @@ select {
 
   }
 
-  /* .formi{
-    margin-:100px;
-  } */
+  

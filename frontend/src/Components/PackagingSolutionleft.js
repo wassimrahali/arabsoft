@@ -7,10 +7,9 @@ const PackagingSolutionleft = () => {
       <div className="help-content">
         <h1>Aider les entreprises à prospérer, prendre soin des clients</h1>
         <p>
-          We help businesses grow and succeed by providing them with the tools and
-          resources they need to thrive.
+        Nous aidons les entreprises à se développer et à réussir en leur fournissant les outils et les ressources dont elles ont besoin pour prospérer.
         </p>
-        <button className="contact-button">Contact Us</button>
+        <button className="contact-button">Contactez-Nous</button>
 
       </div>
     </section>

@@ -61,9 +61,9 @@ const AdminPage = () => {
     <>
     <div className="admin-reservation-list">
       <Sidebar />
-      <div className="content">
+      <div className="content" style={{color:'black'}}>
 
-      <h2>Admin Page</h2>
+      <h1 >Gestion Des utilisateurs</h1>
 
       {/* Bootstrap Alert */}
       {alert && (
